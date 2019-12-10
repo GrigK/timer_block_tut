@@ -1,1 +1,11 @@
-{}
+{
+  "appName":  "Timer",
+
+  "title":  "Flutter Timer",
+  "ready": "Ready { duration: $duration }",
+  "paused": "Paused { duration: $duration }",
+  "running": "Running { duration: $duration }",
+
+  "eventStart": "Start { duration: $duration }",
+  "eventTick": "Tick { duration: $duration }"
+}

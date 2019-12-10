@@ -21,6 +21,35 @@ class S implements WidgetsLocalizations {
   @override
   TextDirection get textDirection => TextDirection.ltr;
 
+  String get appName => "Timer";
+  String get title => "Flutter Timer";
+  String eventStart(String duration) => "Start { duration: $duration }";
+  String eventTick(String duration) => "Tick { duration: $duration }";
+  String paused(String duration) => "Paused { duration: $duration }";
+  String ready(String duration) => "Ready { duration: $duration }";
+  String running(String duration) => "Running { duration: $duration }";
+}
+
+class $ru extends S {
+  const $ru();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get appName => "Таймер";
+  @override
+  String get title => "Таймер Flutter";
+  @override
+  String running(String duration) => "Работаю { время: $duration }";
+  @override
+  String paused(String duration) => "Жду { время: $duration }";
+  @override
+  String ready(String duration) => "Готов { время: $duration }";
+  @override
+  String eventTick(String duration) => "Тик { время: $duration }";
+  @override
+  String eventStart(String duration) => "Старт { время: $duration }";
 }
 
 class $en extends S {
@@ -32,6 +61,7 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
 
   List<Locale> get supportedLocales {
     return const <Locale>[
+      Locale("ru", ""),
       Locale("en", ""),
     ];
   }
@@ -57,6 +87,9 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
     final String lang = getLang(locale);
     if (lang != null) {
       switch (lang) {
+        case "ru":
+          S.current = const $ru();
+          return SynchronousFuture<S>(S.current);
         case "en":
           S.current = const $en();
           return SynchronousFuture<S>(S.current);

@@ -1,0 +1,11 @@
+{
+  "appName":  "Таймер",
+
+  "title":  "Таймер Flutter",
+  "ready": "Готов { время: $duration }",
+  "paused": "Жду { время: $duration }",
+  "running": "Работаю { время: $duration }",
+
+  "eventStart": "Старт { время: $duration }",
+  "eventTick": "Тик { время: $duration }"
+}
