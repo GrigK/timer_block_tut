@@ -2,6 +2,8 @@
 
 Example to use BLoC pattern
 
+In the following tutorial we’re going to cover how to build a timer application using the bloc librar
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
