@@ -52,6 +52,7 @@ class TimerPage extends StatelessWidget {
     );
   }
 
+  /// текст счетчика ММ:СС
   Widget _clockCounter(BuildContext context) {
     return BlocBuilder<TimerBloc, TimerState>(
       builder: (context, state) {
@@ -67,10 +68,13 @@ class TimerPage extends StatelessWidget {
     );
   }
 
+  /// Блок с кнопками под текстом счетчика
   Widget _actionButtons(BuildContext context) {
     return BlocBuilder<TimerBloc, TimerState>(
       /// виджет будет перестроен только при изменении state
-      /// т.е. если  previousState != state будет вызван компоновщик builder
+      /// если [condition] == true
+      /// т.е. если  [previousState] != [state] будет
+      ///  вызван компоновщик [builder[
       condition: (previousState, state) =>
           state.runtimeType != previousState.runtimeType,
       builder: (context, state) => myAction.Actions(),

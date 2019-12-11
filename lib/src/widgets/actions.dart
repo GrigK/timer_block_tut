@@ -4,7 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:timer/src/timer/bloc.dart';
 
-
+/// Widget с кнопками управления
+/// меняет кнопки в зависимости от текущего состояния TimerBloc счетчика
 class Actions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
